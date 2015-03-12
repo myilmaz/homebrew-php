@@ -27,7 +27,7 @@ class Php55Redis < AbstractPhp55Extension
     safe_phpize
 
     if build.with? "igbinary"
-      system "mkdir -p ext/igbinary"
+      mkdir_p "ext/igbinary"
       cp "#{Formula['php55-igbinary'].include}/igbinary.h", "ext/igbinary/igbinary.h"
     end
 
